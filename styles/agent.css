@@ -84,81 +84,13 @@ ul {
     position: relative;
     margin: 10px 15px 15px 10px;
   }
-  
+
   h1 {
     text-align: left;
     font-family: 'Courier New', Courier, monospace;
     line-height: 7;
   }
 
-  .homepic {
-    position: relative;
-    bottom: 80px;
-    float: right;
-    margin-right: 100px;
-}
-
-.box {
-  border: 5px solid black;
-  font-family:'Courier New', Courier, monospace;
-  text-align: center;
-  height: 500px;
-  width: 700px;
-  padding: 50px;
-  position: relative;
-  bottom: 80px;
-  margin-left: 90px;
-}
-
-.buttons {
-  position: relative;
-  top: 90px;
-  background-color: #042e27;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 35px;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-.column {
-  float: left;
-  width: 50%;
-  padding: 5px;
-}
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.p1 {
-  font-family:'Courier New', Courier, monospace;
-  position: relative;
-  float:left;
-  padding-left: 30px;
-}
-
-table {
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-table,
-td,
-th {
-  border: 1px solid black;
-}
-
-h2{
-  font-family: 'Courier New', Courier, monospace;
-}
-
-p{
-  font-family: 'Courier New', Courier, monospace;
-}
+  p{
+    font-family: 'Courier New', Courier, monospace;
+  }
