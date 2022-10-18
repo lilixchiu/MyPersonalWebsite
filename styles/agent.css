@@ -86,10 +86,11 @@ ul {
   }
 
   h1 {
+    padding-top: 100px;
     text-align: left;
     font-family: 'Courier New', Courier, monospace;
-    line-height: 7;
   }
+  
 
   p{
     font-family: 'Courier New', Courier, monospace;
