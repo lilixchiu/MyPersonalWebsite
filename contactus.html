@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="icon" type="image/png" href="images/valicon.jpg" />
 </head>
+
 <body>
+    <div>
+        <img class="logo" src="images/valicon.jpg" alt="logo" title="logo" width="50" />
+    </div>
+
+    <nav>
+        <div class="valbar">
+            <ul>
+                <li><a href="https://www.valorantguide.me">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">About Valorant</a>
+                    <div class="dropdown-content">
+                        <a href="http://127.0.0.1:5501/agents.html">Agents</a>
+                        <a href="http://127.0.0.1:5501/maps.html">Maps</a>
+                        <a href="http://127.0.0.1:5501/weapons.html">Weapons</a>
+                    </div>
+                </li>
+                <li><a href="#">FPS Basics</a></li>
+                <li><a href="#">Glossary</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="http://127.0.0.1:5501/contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <form action="https://oim-apis.herokuapp.com/form2" method="post">
         <h1>Contact Us</h1>
+        <br>
         <div class="grey">
             <div>
                 <label for="lastname">Last Name:</label>
@@ -29,19 +58,19 @@
                 <input type="radio" name="female" id="female" value="female">
             </div>
             <br>
-    
+
             <div>
-                <label for="grade-select"> Which grade do you expect to recieve?</label>
+                <label for="agent-select"> Which agent do you want to start with?</label>
             </div>
             <div>
                 <div>
-                    <select name="grades" id="grade-select">
-                        <option value="A">A</option>
-                        <option value="A-">A-</option>
-                        <option value="B+">B+</option>
-                        <option value="B">B</option>
-                        <option value="B-">B-</option>
-                        <option value="C+">C+</option>
+                    <select name="agent" id="agent-select">
+                        <option value="Brimstone">Brimstone</option>
+                        <option value="Jett">Jett</option>
+                        <option value="Phoenix">Phoenix</option>
+                        <option value="Sova">Sova</option>
+                        <option value="Sage">Sage</option>
+                        <option value="Other">Other</option>
                     </select>
                 </div>
                 <br>
@@ -51,16 +80,18 @@
                     <label for="comments">Leave a Question or Reply:</label>
                 </div>
                 <div>
-                    <textarea id="commments" name="comments" rows="25" cols="85"
+                    <textarea id="commments" name="comments" rows="9" cols="63"
                         placeholder="Enter your comment here..."></textarea>
                 </div>
             </div>
 
             <button type="submit">
-                SUBMIT <img src="images/mailbox.png" height="30" alt="submit button" />
+                SUBMIT <img src="images/valicon.jpg" height="30" alt="submit button" />
             </button>
 
         </div>
     </form>
+
 </body>
+
 </html>
