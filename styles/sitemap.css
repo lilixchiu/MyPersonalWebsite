@@ -91,4 +91,21 @@ ul {
     text-align: center;
     font-family: "Courier New", Courier, monospace;
   }
+
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  p {
+    font-family: "Courier New", Courier, monospace;
+    padding-left: 10px;
+}
+  
   
