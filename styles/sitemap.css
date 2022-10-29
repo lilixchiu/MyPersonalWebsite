@@ -76,7 +76,7 @@ ul {
   }
   
   body {
-    background-image: url(../images/havenmap.png);
+    background-image: url(../images/bindmap.webp);
   }
   
   .logo {
@@ -89,21 +89,6 @@ ul {
   h1 {
     padding-top: 100px;
     text-align: center;
-    font-family: "Courier New", Courier, monospace;
-  }
-  
-  p {
-    font-family: "Courier New", Courier, monospace;
-  }
-
-  .terms {
-    background-color: rgb(255, 255, 255);
-    width: 1700px;
-    height: 1500px;
-    margin: auto;
-    border: 3px solid green;
-    text-align: left;
-    padding-left: 10px;
     font-family: "Courier New", Courier, monospace;
   }
   
