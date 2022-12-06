@@ -8,6 +8,30 @@
     <title>Maps</title>
     <link rel="stylesheet" href="styles/maps.css" />
     <link rel="icon" type="image/png" href="images/valicon.jpg" />
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .maps-image {
+            border: 10px ridge gold;
+            display: block;
+            margin: 30px auto;
+            width: 300px;
+            height: 300px;
+
+        }
+        .center {
+        text-align: center;
+        }
+
+        #maps-image {
+            height: 200px;
+        }
+
+     
+    
+    </style>
 </head>
 
 <body>
@@ -37,65 +61,161 @@
 
     <h1>Maps</h1>
 
-    <table>
-        <thread>
-            <th>Map</th>
-            <th>Photo</th>
-            <th>Country of Inspiration</th>
-        </thread>
-        <tr>
-            <td>Ascent</td>
-            <td><img src="images/ascent.webp" alt="ascent" title="ascent"></td>
-            <td>Venice, Italy. Has two sites, A and B.</td>
-        </tr>
-        <tr>
-            <td>Bind</td>
-            <td><img src="images/bind.webp" alt="bind" title="bind"></td>
-            <td>Rabat, Morroco. Has two sites, A and B, with teleporters.</td>
-        </tr>
-        <tr>
-            <td>Breeze</td>
-            <td><img src="images/breeze.webp" alt="breeze" title="breeze"></td>
-            <td>Bermuda Triangle. Has two sites, A and B.</td>
-        </tr>
-        <tr>
-            <td>Haven</td>
-            <td><img src="images/haven.webp" alt="haven" title="haven"></td>
-            <td>Thimphu, Bhutan, Has three sites, A, B and C.</td>
-        </tr>
-        <tr>
-            <td>Fracture</td>
-            <td><img src="images/fracture.webp" alt="fracture" title="fracture"></td>
-            <td>Santa Fe, New Mexico, USA. Has two sites, A and B.
-            </td>
-        </tr>
-        <tr>
-            <td>Split</td>
-            <td><img src="images/split.webp" alt="split" title="split"></td>
-            <td>Tokyo, Japan. Has two sites, A and B. No longer available in competitive queue.
-            </td>
-        </tr>
-        <tr>
-            <td>Icebox</td>
-            <td><img src="images/icebox.webp" alt="icebox" title="icebox"></td>
-            <td> Bennett Island, Russia. Has two sites, A and B.
-            </td>
-        </tr>
-        <tr>
-            <td>Pearl</td>
-            <td><img src="images/pearl.webp" alt="pearl" title="pearl"></td>
-            <td>Lisbon, Portugal. Has two sites, A and B.
-            </td>
-        </tr>
-    </table>
+        <div class="center">
+            <img alt="Image Goes Here" src="images/ascent.webp" title="Map's Name" id="maps-image" />
+        </div>
+        <div class="center">
+            <button class="btn seat" id="btn1">Ascent</button>
+            <button class="btn seat" id="btn2">Bind</button>
+            <button class="btn seat" id="btn3">Breeze</button>
+            <button class="btn seat" id="btn4">Haven </button>
+            <button class="btn seat" id="btn5">Fracture</button>
+            <button class="btn seat" id="btn6">Split</button>
+            <button class="btn seat" id="btn7">Icebox</button>
+            <button class="btn seat" id="btn8">Pearl</button>
+        </div>
+
+        <script>
+
+            const mapEl = document.getElementById("maps-image");
+            const h1El = document.querySelector("h1");
+
+            function f1() {
+                console.log("starting")
+                mapEl.src = "images/ascent.webp";
+                h1El.innerText = "Ascent";
+                mapEl.style.border = "5px solid yellow"
+            }
+
+            function f2() {
+                console.log("starting")
+                mapEl.src = src="images/bind.webp";
+                h1El.innerText = "Bind";
+                mapEl.style.border = "5px solid red"
+
+            }
+
+            function f3() {
+                mapEl.src = "images/breeze.webp";
+                h1El.innerText = "Breeze";
+                mapEl.style.border = "5px solid green"
+            }
+
+            function f4() {
+                mapEl.src = "images/haven.webp";
+                h1El.innerText = "Haven";
+                mapEl.style.border = "5px solid lime"
+            }
+
+            function f5() {
+                mapEl.src = "images/fracture.webp";
+                h1El.innerText = "Fracture";
+                mapEl.style.border = "5px solid pink"
+            }
+
+            function f6() {
+                mapEl.src = "images/split.webp";
+                h1El.innerText = "Split";
+                mapEl.style.border = "5px solid pink"
+            }
+
+            function f7() {
+                mapEl.src = "images/icebox.webp" ;
+                h1El.innerText = "Icebox";
+                mapEl.style.border = "5px solid blue"
+            }
+
+            function f8() {
+                mapEl.src = "images/pearl.webp";
+                h1El.innerText = "Pearl";
+                mapEl.style.border = "5px solid purple"
+            }
 
 
+            let buttons = document.querySelectorAll('.btn');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    seatFunction(button)
+                });
+            });
+
+            function seatFunction(a) {
+                buttons.forEach(button => {
+                    button.style.background = "white";
+                });
+
+            }
 
 
+            document.getElementById("btn1").addEventListener("click", function () {
+                f1();
+            });
+
+            document.getElementById("btn2").addEventListener("click", function () {
+                f2();
+            });
+
+            document.getElementById("btn3").addEventListener("click", function () {
+                f3();
+            });
+
+            document.getElementById("btn4").addEventListener("click", function () {
+                f4();
+            });
+
+            document.getElementById("btn5").addEventListener("click", function () {
+                f5();
+            });
+
+            document.getElementById("btn6").addEventListener("click", function () {
+                f6();
+            });
+
+            document.getElementById("btn7").addEventListener("click", function () {
+                f7();
+            });
+
+            document.getElementById("btn8").addEventListener("click", function () {
+                f8();
+            });
+
+            function enlarge(x) {
+                let i = document.getElementById(x);
+                let w = i.width;
+                let h = i.height;
+                w = w * 1.25;
+                h = h*1.25;
+                i.width = w;
+                i.height  = h;              
+                
+                
+            }
+
+            function shrink(x) {
+                let i = document.getElementById(x);
+                let w = i.width;
+                w = w / 1.25;
+                i.width = w;
+                let h = i.height;
+                h = h/1.25;
+                i.height  = h;
+            }
+
+            document.querySelectorAll("img").forEach((element) => {
+                element.addEventListener("mouseover", function () {
+                    enlarge(this.id);
+                });
+                element.addEventListener("mouseout", function () {
+                    shrink(this.id);
+                });
+            });
 
 
+    
+        </script>
 
 
-</body>
+    </body>
 
 </html>

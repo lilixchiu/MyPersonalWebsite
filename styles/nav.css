@@ -77,7 +77,7 @@ li a {
 
 body {
   background-color: #fa4454; 
-  @media screen and (max-width:1200px) and (min-width:1024px) {
+  @media screen and (max-width:1200px) and (min-width:480px) {
     background-color: #fa4454; 
   }
 }
