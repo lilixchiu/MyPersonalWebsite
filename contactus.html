@@ -60,6 +60,12 @@
             <br>
 
             <div>
+                Enter your age :
+                <input name="age" size="4" type="text" />
+              </label>
+            </div>
+            <br>
+            <div>
                 <label for="agent-select"> Which agent do you want to start with?</label>
             </div>
             <div>
@@ -86,11 +92,37 @@
             </div>
 
             <button type="submit">
-                SUBMIT <img src="images/valicon.jpg" height="30" alt="submit button" />
+                SUBMIT <img src="images/valicon.jpg" height="30" alt="submit button" id="submit-btn"  />
             </button>
 
         </div>
     </form>
+
+    <script>
+        function display() {
+          const myForm = document.querySelector("form");
+          const fullName = myForm["name"].value;
+          const age = myForm["age"].value;
+          const gender = myForm["gender"].value;
+  
+          if (fullName.length === 0 || age === "") {
+            alert("You did not finish the form yet!");
+          } else if (isNaN(age) || parseInt(age) > 130) {
+            alert("You did not enter a valid age.");
+          } else {
+            let message;
+            if (myForm["noAge"].checked) {
+              message = "Name: " + fullName + "\nGender: " + gender;
+            } else {
+              message =
+                "Name: " + fullName + "\nAge: " + age + "\nGender: " + gender;
+            }
+            myForm["result"].value = message;
+          }
+        }
+  
+        document.querySelector("#submit-btn").onclick = display;
+      </script>
 
 </body>
 
